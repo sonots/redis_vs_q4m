@@ -2,3 +2,32 @@ redis_vs_q4m
 ============
 
 benchmark to evaluate redis vs q4m as a queue engine
+
+# RESULT
+
+Benchmarking enqueue/dequeue 10,000 messages
+
+|                       | enqueue (sec) | dequeue (sec) |
+|-----------------------|---------------|---------------|
+| q4m (--with-sync=yes) | 1.886356      | 3.476402      |
+| redis                 | 0.515319      | 0.271107      |
+| redis(to_json)        | 0.720960      | 0.365112      |
+| redis(save)           | 0.625842      | 17.966775     |
+
+In throughputs (#/sec) form:
+
+|                       | enqueue (#/sec) | dequeue (#/sec) |
+|-----------------------|-----------------|-----------------|
+| q4m (--with-sync=yes) | 5301            | 2876            |
+| redis                 | 19405           | 36885           |
+| redis(to_json)        | 13870           | 27388           |
+| redis(save)           | 15978           | 556             |
+
+# Machine Spec
+
+```
+CPU Xeon E5-2670 2.60GHz x 2 (32 Cores)
+Memory  24G
+Disk    300G(10000rpm) x 2 [SAS-HDD]
+OS CentOS release 6.2 (Final)
+```
