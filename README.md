@@ -23,6 +23,8 @@ In throughputs (#/sec) form:
 | redis(to_json)        | 17429           | 24860           |
 | redis(persistence)    | 19339           | 32158           |
 
+CONCLUSION: Redis won. But, please note that redis' rpop does not have rollback functionality. 
+
 # Machine Spec
 
 ```
