@@ -61,3 +61,4 @@ Redis
 
 * benchmark in multithreads
   * redis is single thread, mysql (q4m) is multi thread. So, q4m would overcome redis
+* create docker container or AMI to make it easy to rerun the benchmark
