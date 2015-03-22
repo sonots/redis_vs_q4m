@@ -56,3 +56,8 @@ Redis
 
 * [redis.conf](redis/redis.conf)
 * [redis.aof.conf](redis/redis.aof.conf) for presistence
+
+# ToDo
+
+* benchmark in multithreads
+  * redis is single thread, mysql (q4m) is multi thread. So, q4m would overcome redis
